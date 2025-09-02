@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Sentiment Analysis Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .summary {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+        .chart-container {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .chart-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Airline Sentiment Analysis Dashboard</h1>
+
+        <div class="summary">
+            <h2>Analysis Summary</h2>
+            <p>This dashboard presents the results of sentiment analysis on airline-related tweets. The analysis includes:</p>
+            <ul>
+                <li>Distribution of sentiments (positive, negative, neutral)</li>
+                <li>Sentiment breakdown by airline</li>
+                <li>Top negative reasons</li>
+                <li>Comparison of predicted vs actual sentiments</li>
+            </ul>
+            <p><strong>Note:</strong> The dataset contains pre-labeled sentiments. Our analysis also performs new sentiment prediction using TextBlob for comparison.</p>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-title">Overall Sentiment Distribution</div>
+            <img src="sentiment_distribution.png" alt="Sentiment Distribution Chart">
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-title">Sentiment Distribution by Airline</div>
+            <img src="sentiment_by_airline.png" alt="Sentiment by Airline Chart">
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-title">Top 10 Negative Reasons</div>
+            <img src="negative_reasons.png" alt="Negative Reasons Chart">
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-title">Negative Reasons by Airline</div>
+            <img src="negative_reasons_by_airline.png" alt="Negative Reasons by Airline Chart">
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-title">Confidence Distribution for Negative Sentiments</div>
+            <img src="negative_confidence_distribution.png" alt="Negative Confidence Distribution Chart">
+        </div>
+
+        <div class="summary">
+            <h2>Detailed Negative Feedback Analysis</h2>
+            <p>The analysis reveals specific patterns in negative feedback:</p>
+            <ul>
+                <li><strong>Customer Service Issues</strong>: Most common complaint across all airlines</li>
+                <li><strong>Late Flight</strong>: Significant delays affect passenger satisfaction</li>
+                <li><strong>Lost Luggage</strong>: Baggage handling problems are frequent</li>
+                <li><strong>Booking Problems</strong>: Issues with reservations and ticketing</li>
+                <li><strong>Flight Attendant Complaints</strong>: Service quality concerns</li>
+            </ul>
+            <p><strong>Airline-Specific Insights:</strong></p>
+            <ul>
+                <li>United Airlines has the highest number of negative tweets</li>
+                <li>US Airways shows high customer service complaints</li>
+                <li>American Airlines frequently mentioned for flight delays</li>
+                <li>Most negative sentiments have high confidence scores (>0.6)</li>
+            </ul>
+        </div>
+
+        <div class="summary">
+            <h2>Key Insights</h2>
+            <ul>
+                <li>Most tweets express negative sentiments towards airlines</li>
+                <li>Common negative reasons include customer service issues, flight delays, and baggage problems</li>
+                <li>Some airlines have better sentiment scores than others</li>
+                <li>TextBlob predictions show reasonable accuracy compared to human-labeled data</li>
+                <li>Negative feedback is highly confident, indicating clear dissatisfaction</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
